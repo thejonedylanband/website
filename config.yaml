@@ -1,4 +1,4 @@
-baseURL: thejonedylanband.github.io
+# baseURL: thejonedylanband.github.io
 languageCode: en-us
 title: The Jone Dylan Band
 theme: hugo-refresh
