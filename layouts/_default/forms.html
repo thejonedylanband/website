@@ -1,0 +1,16 @@
+{{- define "main" -}}
+
+    {{- partial "navbar.html" . -}}
+    {{- partial "navbar-clone.html" . -}}
+    {{- partial "form-content.html" . -}}
+
+    {{- partial "footer.html" . -}}
+
+    <script src="https://kwes.io/js/kwes.js"></script>
+
+    <!-- Back To Top Button -->
+    <div id="backtotop"><a href="#"></a></div>
+
+    {{- partial "sidebar.html" . -}}
+
+{{- end -}}

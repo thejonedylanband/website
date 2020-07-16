@@ -1,0 +1,137 @@
+<section class="section is-medium">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-centered-tablet-portrait">
+        <h1 class="title is-2 section-title">{{- .Title -}}</h1>
+        <h5 class="subtitle is-5 is-muted">{{- .Params.Subtitle -}}</h5>
+        <div class="divider"></div>
+        {{/*  <section class="section content">  */}}
+        <section class="section content has-text-justified">
+          {{- $formType := .Params.form -}}
+          {{- if (eq $formType "contact") -}}
+          <p id="contactFormInstructions">The purpose of this page is to submit general questions to the band.
+            To book us, please visit our <a href="/booking">booking page</a>. Thank you!
+          </p>
+          <div class="columns">
+          <div class="kwes-form column is-8">
+          <div class="kwes-form">
+              <form aria-describedby="contactFormInstructions" method="POST" action="https://kwes.io/api/foreign/forms/GV79Xii7QNADEaQwZdEK">
+                <div class="field">
+                  <label for="name" class="label">Name (required)</label>
+                  <div class="control">
+                    <input name="name" class="input is-medium" type="text" placeholder="Enter name here" rules="required|max:100">
+                  </div>
+                </div>
+                <label for="email" class="label">Email (required)</label>
+                <div class="field">
+                  <p class="control has-icons-left">
+                    <input class="input is-medium" type="email" name="email" placeholder="Enter email here" rules="required|email">
+                    <span class="icon is-left email-center">
+                      <i class="fa fa-envelope"></i>
+                    </span>
+                  </p>
+                  <div class="field">
+                    <label class="label" for="message">Message</label>
+                    <div class="control">
+                      <textarea name="message" class="textarea is-medium" placeholder="Enter your message here"></textarea>
+                    </div>
+                  </div>
+                  <div class="control">
+                    <button class="button is-link is-medium">Submit</button>
+                  </div>
+                </div>
+              </form>
+          </div>
+          </div>
+          {{- else if (eq $formType "booking") -}}
+          <p id="bookingFormInstructions"> To book us, please contact 609-694-9126,
+            <a href="mailto:thejonedylanband@gmail.com">thejonedylanband@gmail.com</a>, or
+          fill out this form and we will get back to you ASAP. Thank you! </p>
+          <div class="columns">
+          <div class="column is-8">
+          <div class="kwes-form">
+              <form aria-describedby="bookingFormInstructions" method="POST" action="https://kwes.io/api/foreign/forms/6pYY2u48eZazYurYo9F3">
+                <div class="field">
+                  <label for="name" class="label">Name (required)</label>
+                  <div class="control">
+                    <input name="name" class="input is-medium" type="text" placeholder="Enter name here" rules="required|max:100">
+                  </div>
+                </div>
+                <div class="field">
+                <label for="email" class="label">Email (required)</label>
+                  <p class="control has-icons-left">
+                    <input class="input is-medium" type="email" name="email" placeholder="Enter email here" rules="required|email">
+                    <span class="icon is-left email-center">
+                      <i class="fa fa-envelope"></i>
+                    </span>
+                  </p>
+                </div>
+                <div class="field">
+                  <label for="phone" class="label">Phone number</label>
+                  <p class="control has-icons-left">
+                    <input class="input is-medium" type="tel" name="phone" placeholder="Enter phone number here">
+                    <span class="icon is-left email-center">
+                      <i class="fa fa-phone"></i>
+                    </span>
+                  </p>
+                </div>
+                <div class="field kw-radio-group">
+                  <label for="package" class="label">Type of service</label>
+                  <div class="control radio-padding">
+                    <label class="radio">
+                      <input type="radio" name="package" id="FullBand" label="Full band">
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="package" id="Acoustic" label="Acoustic">
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="package" id="Other" label="Other">
+                    </label>
+                  </div>
+                  <div class="field">
+                    <label class="label" for="date-selection">Date interested</label>
+                    <div class="control">
+                      <input type="datepicker" class="input is-medium" name="date" placeholder="Click to select a date">
+                    </div>
+                  </div>
+                  <div class="field">
+                    <label class="label" for="message">Message</label>
+                    <div class="control">
+                      <textarea name="message" class="textarea is-medium" placeholder="Enter your message here"></textarea>
+                    </div>
+                  </div>
+                  <div class="control">
+                    <button class="button is-link is-medium">Submit</button>
+                  </div>
+                </div>
+              </form>
+          </div>
+          </div>
+          {{- end -}}
+          <div class="column is-4">
+          <!-- <div class="content"> -->
+            {{- .Content -}}
+          <!-- </div> -->
+          </div>
+        </div>
+        </section>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="container">
+    <div class="columns">
+      <div class="column">
+      </div>
+    </div>
+  </div> -->
+  {{- if not .Params.hideLastModified -}}
+  <div class="container">
+    <div class="columns">
+      <div class="column has-text-right is-family-monospace is-centered-tablet-portrait">
+        {{ i18n "lastModified" }}:&nbsp;
+        {{- .Lastmod.Format "2 January 2006" -}}
+      </div>
+    </div>
+  </div>
+  {{- end -}}
+</section>

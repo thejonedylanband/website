@@ -1,0 +1,96 @@
+{{- define "main" -}}
+
+    <section class="hero is-fullheight is-default is-bold">
+
+        {{- partial "navbar.html" . -}}
+        {{- partial "navbar-clone.html" . -}}
+
+        {{- $homepage   := .Site.Params.homepage -}}
+        {{- $title      := index $homepage "title" -}}
+        {{- $subtitle   := index $homepage "subtitle" -}}
+        {{- $image      := index $homepage "image" -}}
+        <div class="hero-body">
+        <div class="container">
+            <div class="columns is-vcentered">
+            <div class="column is-7 is-hidden-tablet">
+                <figure class="image">
+                {{- $img := resources.Get $image -}}
+                <img src="{{- $img.Permalink | relURL -}}"
+                     style="width:{{- .Site.Params.homepage.imageWidth -}}" alt="Myself">
+                </figure>
+            </div>
+            <div class="column is-5 landing-caption">
+                <h1 class="title is-1 is-bold is-spaced">
+                {{- $title -}}
+                </h1>
+                {{- with $subtitle -}}
+                <p class="subtitle is-5 is-muted">
+                {{ . }}
+                </p>
+                <p class="has-text-centered">
+                <a class="button is-primary is-size-4" href="/booking">Book us</a>
+                </p>
+                <p>
+                <div class="kwes-form is-hidden-touch is-hidden-desktop-only">
+                <p id="subscribeFormHalfWidth" class="form-padding is-size-4">Subscribe for updates</p>
+                    <form aria-describedby="subscribeFormHalfWidth" method="POST" action="https://kwes.io/api/foreign/forms/LB2147dIrsfHVpWMW6Vg">
+                      <label for="email" class="label">Email</label>
+                      <div class="field has-addons">
+                        <p class="control has-icons-left is-expanded">
+                          <input class="input is-medium" type="email" name="email" placeholder="Enter email here">
+                          <span class="icon is-left email-center">
+                            <i class="fa fa-envelope"></i>
+                          </span>
+                        </p>
+                        <div class="control">
+                          <button class="button is-link is-medium">Subscribe now</button>
+                        </div>
+                      </div>
+                    </form>
+                </div>
+                </p>
+                {{- end -}}
+                {{/*  <p>
+                <a class="button cta rounded primary-btn raised" href="{{- $buttonLink -}}">
+                    {{- $buttonText -}}
+                </a>
+                </p>  */}}
+            </div>
+            <div class="column is-7 is-hidden-mobile">
+                <figure class="image">
+                {{- $img := resources.Get $image -}}
+                <img src="{{- $img.Permalink | relURL -}}"
+                     style="width:{{- .Site.Params.homepage.imageWidth -}}" alt="Myself">
+                </figure>
+            </div>
+            </div>
+            <div class="kwes-form column is-12 is-hidden-widescreen">
+                <p id="subscribeFormFullWidth" class="form-padding is-size-4">Subscribe for updates</p>
+                <form aria-describedby="subscribeFormFullWidth" method="POST" action="https://kwes.io/api/foreign/forms/kSJcHH6amrlBFZsliU25">
+                  <label for="email" class="label">Email</label>
+                  <div class="field has-addons">
+                    <p class="control has-icons-left is-expanded">
+                      <input class="input is-medium" type="email" name="email" placeholder="Enter email here">
+                      <span class="icon is-left email-center">
+                        <i class="fa fa-envelope"></i>
+                      </span>
+                    </p>
+                    <div class="control">
+                      <button class="button is-link is-medium">Subscribe now</button>
+                    </div>
+                  </div>
+                </form>
+            </div>
+            <script src="https://kwes.io/js/kwes.js"></script>
+        </div>
+        </div>
+    </section>
+
+    {{- partial "footer.html" . -}}
+
+    <!-- Back To Top Button -->
+    <div id="backtotop"><a href="#"></a></div>
+
+    {{- partial "sidebar.html" . -}}
+
+{{- end -}}
