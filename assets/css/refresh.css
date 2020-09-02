@@ -95,6 +95,15 @@ small { margin-left: -5000px; }
   margin-left: 4px;
 }
 
+@media screen and (max-width: 560px) {
+  button.subscribe {
+    width: 100%;
+  }
+  .field.has-addons {
+    display: block;
+  }
+}
+
 /* .content{
   pre{
     background-color: hsla(120, 100%, 50%, 0);
