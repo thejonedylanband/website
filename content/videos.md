@@ -5,6 +5,10 @@ draft: false
 hideLastModified: true
 showInMenu: true
 ---
+Live At The Cool Cricket Bar & Grill
+{{< youtube KAhbegHA2Vs >}}
+
+
 Trio Live at Tindall Road Brewery
 {{< youtube 1_b8l7-XXHc >}}
 
