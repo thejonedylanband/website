@@ -23,27 +23,3 @@ Live at Surf City Yacht Club 2020
 
 Live at Surf City Yacht Club 2019
 {{< youtube To_4f620MYs >}}
-
-
-BLUES:
-{{< youtube lPEnrF2G_lc >}}
-
-
-90's:
-{{< youtube ZFXj5_1adio >}}
-
-
-COUNTRY:
-{{< youtube hYSMud5WfG8 >}}
-
-
-80's:
-{{< youtube BoKDDU6KLng >}}
-
-
-FUNK:
-{{< youtube kzqyRXnIHfM >}}
-
-
-70's:
-{{< youtube QgiRVpzXFBs >}}

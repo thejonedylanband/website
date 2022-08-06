@@ -141,7 +141,7 @@ params:
        link: the_jone_dylan_band
        title: Instagram
     # option to specify the copyright in the footer
-    copyright: The Jone Dylan Band - 2020
+    copyright: The Jone Dylan Band - 2022
 
 ###################################################################
 ################## multilanguage support options ##################
@@ -190,4 +190,3 @@ languages:
         # github:
         #   link: username
         #   title: Github
-        copyright: Julia белая краска - 2020

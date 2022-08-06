@@ -9,4 +9,4 @@ showInMenu: true
 form: "contact"
 layout: "forms"
 ---
-![Jone Dylan, Steve, and Nikitas at the Surf City Yacht Club with a poster containing the band logo.](images/band-contact.jpg)
+![Jone Dylan, DiGiac, and Nikitas at the Surf City Yacht Club with a poster containing the band logo.](images/band-contact.jpg)

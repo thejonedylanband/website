@@ -7,9 +7,9 @@ showInMenu: true
 ---
 ## The Jone Dylan Band is made up of 4 people:
  - Dylan Lloyd - Lead Guitar/Vocals
- - Steven DiGiacomo - Bass Guitar/Vocals/Cowbell
- - Nikitas Tampakis - Keyboard/Fiddle/Vocals
- - Adam Liotta - Drums
+ - DiGiac - Bass Guitar/Vocals/Cowbell
+ - Nikitas - Keyboard/Fiddle/Vocals
+ - Adam - Drums
 
 
 The band is able to perform in various configurations to fit your needs.
